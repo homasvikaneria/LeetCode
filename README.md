@@ -29,7 +29,7 @@ Every solution includes a **YouTube video** where I explain:
 - Code walkthrough in multiple languages.  
 - Optimizations and alternative solutions.  
 
-[Watch all explanations on my YouTube Channel](https://www.youtube.com/channel/YOUR_CHANNEL_LINK)
+[Watch all explanations on my YouTube Channel]((https://www.youtube.com/@HomasviKaneria/))
 
 ---
 
@@ -47,6 +47,6 @@ Feel free to submit **pull requests** or open **issues** for discussions.
 
 ## 📌 Goal
 
-The aim of this repository is to provide a **comprehensive, multilingual resource** for anyone looking to **master algorithmic problem solving** and **learn from visual explanations**.  
+The goal of this repository is to **continuously improve coding skills, learn efficient algorithms, and develop problem-solving expertise**. By solving problems in multiple languages and explaining them in videos, I aim to **build a strong foundation in programming and algorithmic thinking**.  
 
 Happy coding! 🚀
