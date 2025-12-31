@@ -5,7 +5,7 @@ public:
             return false;
         }
 
-        map<char,char>m1,m2;
+        unordered_map<char,char>m1,m2;
 
         for(int i=0;i<s.length();i++){
             if(m1.find(s[i])!=m1.end()){
