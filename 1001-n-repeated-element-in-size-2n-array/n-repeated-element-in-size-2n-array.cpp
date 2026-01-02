@@ -1,14 +1,13 @@
 class Solution {
 public:
     int repeatedNTimes(vector<int>& nums) {
-        unordered_map<int, int> mp;
-        int temp;
-        for (int i = 0; i < nums.size(); i++) {
-            mp[nums[i]]++;
-        }
-        for(auto i:mp){
-            if(i.second==nums.size()/2){
-                return i.first;
+        unordered_set<int>s;
+        for(int i=0;i<nums.size();i++){
+            if(s.find(nums[i])!=s.end()){
+                return nums[i];
+            }
+            else{
+                s.insert(nums[i]);
             }
         }
         return -1;
