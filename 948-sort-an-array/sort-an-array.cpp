@@ -50,7 +50,6 @@ void mergeSort(vector<int>& arr, int st, int end) {
         return arr;
     }
 };
-auto init = atexit([]() { ofstream("display_runtime.txt") << "0"; });
 
 // class Solution {
 // public:
