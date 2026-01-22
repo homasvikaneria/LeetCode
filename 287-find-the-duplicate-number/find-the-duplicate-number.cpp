@@ -8,6 +8,7 @@ public:
         for(auto x:mp){
             if(x.second>=2){
                 return x.first;
+                break;
             }
         }
         return -1;
