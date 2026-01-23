@@ -19,7 +19,6 @@ public:
                 maxWater=maxW;
             }
             gap--;
-            cout<<gap<<" ";
         }
         return maxWater;
     }
