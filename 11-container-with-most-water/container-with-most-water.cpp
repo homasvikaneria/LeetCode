@@ -13,11 +13,8 @@ public:
             }else{
                 maxW=(gap)*height[j];
                 j--;
-
             }
-            if(maxWater<maxW){
-                maxWater=maxW;
-            }
+            maxWater=max(maxWater,maxW);
             gap--;
         }
         return maxWater;
