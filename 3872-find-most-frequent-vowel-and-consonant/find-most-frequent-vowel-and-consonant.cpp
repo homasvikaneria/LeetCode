@@ -3,11 +3,11 @@ public:
     int maxFreqSum(string s) {
         unordered_map<char,int>vow;
         unordered_map<char,int>con;
-        for(int i=0;i<s.length();i++){
-            if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'){
-                vow[s[i]]++;
+        for(char i:s){
+            if(i=='a'||i=='e'||i=='i'||i=='o'||i=='u'){
+                vow[i]++;
             }else{
-                con[s[i]]++;
+                con[i]++;
             }
         }
         int maxVow=0;
