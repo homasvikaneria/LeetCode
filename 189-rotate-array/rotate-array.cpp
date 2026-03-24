@@ -1,13 +1,19 @@
 class Solution {
 public:
-    void rotate(vector<int>& nums, int k) {        
-        vector<int> newArray(nums.size()); 
-        for(int i = 0; i < nums.size(); ++i) {
-            int newIndex = (i + k) % nums.size();
-            newArray[newIndex] = nums[i];
-        }        
-        for(int i = 0; i < nums.size(); ++i) {
-            nums[i] = newArray[i];
-        }
+    void halfrotate(vector<int>&nums, int st,int end){
+        while(st<end){
+            int temp=nums[st];
+            nums[st]=nums[end];
+            nums[end]=temp;
+            end--;
+            st++;
+        }  
+    }
+    void rotate(vector<int>& nums, int k) {
+        int n=nums.size();
+        k = k % n;
+        halfrotate(nums,0,n-1);
+        halfrotate(nums,0,k-1);
+        halfrotate(nums,k,n-1);
     }
 };
