@@ -1,11 +1,15 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        int single=0;
+        map<int, int> freq;
         for (int i = 0; i < nums.size(); i++) {
-            single^=nums[i];
+            freq[nums[i]]++;
         }
-    return single;
+        for (auto it : freq) {
+            if (it.second == 1) {
+                return it.first;
+            }
+        }
+        return -1; 
     }
-    
 };
