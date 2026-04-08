@@ -1,15 +1,15 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        map<int, int> freq;
-        for (int i = 0; i < nums.size(); i++) {
-            freq[nums[i]]++;
+        unordered_map<int ,int>mp;
+        for(int i=0;i<nums.size();i++){
+            mp[nums[i]]++;
         }
-        for (auto it : freq) {
-            if (it.second == 1) {
-                return it.first;
+        for(auto x : mp){
+            if(x.second==1){
+                return x.first;
             }
         }
-        return -1; 
+        return -1;
     }
 };
