@@ -1,19 +1,18 @@
 class Solution {
 public:
-    void halfrotate(vector<int>&nums, int st,int end){
-        while(st<end){
-            int temp=nums[st];
-            nums[st]=nums[end];
-            nums[end]=temp;
+    void reverse(vector<int>& nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
             end--;
-            st++;
-        }  
+            start++;
+        }
     }
     void rotate(vector<int>& nums, int k) {
-        int n=nums.size();
-        k = k % n;
-        halfrotate(nums,0,n-1);
-        halfrotate(nums,0,k-1);
-        halfrotate(nums,k,n-1);
+        k=k%nums.size();
+        reverse(nums, 0, nums.size() - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.size() - 1);
     }
 };
