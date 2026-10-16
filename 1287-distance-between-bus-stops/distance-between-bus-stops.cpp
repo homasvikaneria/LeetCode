@@ -1,16 +1,17 @@
 class Solution {
 public:
-    int distanceBetweenBusStops(vector<int>& distance, int start, int destination) {
-        if (start > destination) {
-            swap(start, destination);
-        }
+    int distanceBetweenBusStops(vector<int>& distance, int start,int destination) {
         int clockwise = 0;
-        for (int i = start; i < destination; i++) {
-            clockwise += distance[i];
-        }
-        int total = accumulate(distance.begin(), distance.end(), 0);
-        int counterClockwise = total - clockwise;
+        int total = 0;
 
-        return min(clockwise, counterClockwise);
+        for (int i = 0; i < distance.size(); i++) {
+            total += distance[i];
+
+            if (i >= min(start, destination) && i < max(start, destination)) {
+                clockwise += distance[i];
+            }
+        }
+
+        return min(clockwise, total - clockwise);
     }
 };
